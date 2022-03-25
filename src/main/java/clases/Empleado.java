@@ -40,8 +40,8 @@ public abstract class Empleado extends Persona {
 
     @Override
     public String toString() {
-        return super.toString()+
-                "Empleado:" + "numeroSeguridadSocial=" + numeroSeguridadSocial + ", salario=" + salario;
+        return super.toString()
+                + "Empleado:" + "numeroSeguridadSocial=" + numeroSeguridadSocial + ", salario=" + salario;
     }
 
 }

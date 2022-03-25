@@ -32,9 +32,8 @@ public class Nif {
         return fechaCaducidad;
     }
 
-    
     //metodo que genera la letra
-    private char generarLetra(String numero){
+    private char generarLetra(String numero) {
         char letra;
         switch (Integer.parseInt(numero) % 23) {
             case 0:
@@ -109,17 +108,14 @@ public class Nif {
         }
         return letra;
     }
-    
-    
-    
+
     //metodo renueva la fecha
-    public LocalDate renovarNif(LocalDate fechaSolicitudRenovacion){
+    public LocalDate renovarNif(LocalDate fechaSolicitudRenovacion) {
         LocalDate hoy = LocalDate.now();
         LocalDate fechaNueva = hoy.plusYears(10);
         return fechaNueva;
     }
-    
-    
+
     @Override
     public String toString() {
         return "Nif:" + "numero=" + numero + ", letra=" + letra + ", fechaCaducidad=" + fechaCaducidad;

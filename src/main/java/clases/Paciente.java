@@ -37,20 +37,20 @@ public class Paciente extends Persona {
     public void tomarMedicina(String medicina) {
         //random para que de true o false aleatoriamnet
         Random curao = new Random();
-        boolean curado=curao.nextBoolean();
-        
-        if(curado=true){
-            System.out.println(getNombre()+" se ha curado exitosamente");
-        }else{
-            System.out.println(getNombre()+" le ha sentado mal "+medicina);
+        boolean curado = curao.nextBoolean();
+
+        if (curado = true) {
+            System.out.println(getNombre() + " se ha curado exitosamente");
+        } else {
+            System.out.println(getNombre() + " le ha sentado mal " + medicina);
         }
-        
+
     }
 
     @Override
     public String toString() {
-        return super.toString()+
-                "Paciente" + "numeroHistoria=" + numeroHistoria;
+        return super.toString()
+                + "Paciente" + "numeroHistoria=" + numeroHistoria;
     }
 
 }

@@ -31,7 +31,7 @@ public class Medico extends Empleado {
     //metodo propio de medico
     public void tratar(Paciente paciente, String medicina) {
         System.out.println("El medico" + getNombre() + " trata al paciente" + paciente.getNombre() + " el medicamento " + medicina);
-        
+
     }
 
     //metodo heredado de empleado
