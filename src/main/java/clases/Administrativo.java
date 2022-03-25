@@ -27,18 +27,30 @@ public class Administrativo extends Empleado {
 
     //metodo propio de Administrativo
     public void registrarDocumento(String nombreDoc) {
-        System.out.println("Se ha registrado el documento");
+        System.out.println(getNombre()+" "+getApellido()+" ha registrado el documento "+nombreDoc+", cuyo hashcode es "+nombreDoc.hashCode());
     }
 
     //metodo heredado de Empleado
     public double calcularIRPF() {
-
+        double resultado=0;
+        switch (this.grupo) {
+            case C:
+                resultado=getSalario() * 0.175;
+                break;
+            case D:
+                resultado=getSalario() * 0.18;
+                break;
+            case A:
+                resultado=getSalario() * 0.185;
+                break;
+        }
+        return resultado;
     }
 
     @Override
     public String toString() {
-        return super.toString()+
-                "Administrativo" + "grupo=" + grupo;
+        return super.toString()
+                + "Administrativo" + "grupo=" + grupo;
     }
 
 }

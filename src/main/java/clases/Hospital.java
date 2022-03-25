@@ -1,5 +1,7 @@
 package clases;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Álvaro
@@ -9,6 +11,12 @@ public class Hospital {
     private String nombre;
     private String direccion;
     private int numeroCamas;
+    private ArrayList <Paciente> pacientes= new ArrayList<>();
+    private ArrayList <Empleado> empleados= new ArrayList<>();
+    
+    
+    
+    
 
     public Hospital(String nombre, String direccion, int numeroCamas) {
         this.nombre = nombre;
@@ -44,11 +52,11 @@ public class Hospital {
     
     //metodos de hospital
     public void contratarEmpleado(Empleado emp){
-        System.out.println("Se ha contratado a un nuevo empleado");
+        empleados.add(emp);
     }
     
     public void ingresarPaciente(Paciente paciente){
-        System.out.println("Se ha ingresado a un nuevo paciente");
+        pacientes.add(paciente);
     }
 
     @Override

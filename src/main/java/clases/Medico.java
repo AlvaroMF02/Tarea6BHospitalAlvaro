@@ -1,5 +1,8 @@
 package clases;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 /**
  *
  * @author Álvaro
@@ -27,18 +30,26 @@ public class Medico extends Empleado {
 
     //metodo propio de medico
     public void tratar(Paciente paciente, String medicina) {
-        System.out.println("El medico trata al paciente");
+        System.out.println("El medico" + getNombre() + " trata al paciente" + paciente.getNombre() + " el medicamento " + medicina);
+        
     }
 
     //metodo heredado de empleado
+    @Override
     public double calcularIRPF() {
-
+        double irpf;
+        if (getEspecialidad().equalsIgnoreCase("cirugia")) {
+            irpf = 0.025 * getSalario();
+        } else {
+            irpf = 0.235 * getSalario();
+        }
+        return irpf;
     }
 
     @Override
     public String toString() {
-        return super.toString()+
-                "Medico" + "especialidad=" + especialidad;
+        return super.toString()
+                + "Medico" + "especialidad=" + especialidad;
     }
 
 }

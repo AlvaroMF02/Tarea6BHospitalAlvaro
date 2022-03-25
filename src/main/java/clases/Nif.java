@@ -1,6 +1,7 @@
 package clases;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import org.apache.commons.lang3.RandomStringUtils;
 
 /**
@@ -109,10 +110,13 @@ public class Nif {
         return letra;
     }
     
+    
+    
     //metodo renueva la fecha
-    public LocalDate renovar(LocalDate fechaSolicitudRenovacion){
-        
-        return nuevaFecha;
+    public LocalDate renovarNif(LocalDate fechaSolicitudRenovacion){
+        LocalDate hoy = LocalDate.now();
+        LocalDate fechaNueva = hoy.plusYears(10);
+        return fechaNueva;
     }
     
     

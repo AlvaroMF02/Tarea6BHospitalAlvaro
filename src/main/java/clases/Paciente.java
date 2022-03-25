@@ -1,6 +1,7 @@
 package clases;
 
 import java.time.LocalDate;
+import java.util.Random;
 
 /**
  *
@@ -15,7 +16,7 @@ public class Paciente extends Persona {
         this.numeroHistoria = numeroHistoria;
     }
 
-    public Paciente(String numeroHistoria) {
+    public Paciente() {
         super();
     }
 
@@ -34,7 +35,16 @@ public class Paciente extends Persona {
 
     //metodo propio de paciente
     public void tomarMedicina(String medicina) {
-        System.out.println("El paciente se tomará " + medicina);
+        //random para que de true o false aleatoriamnet
+        Random curao = new Random();
+        boolean curado=curao.nextBoolean();
+        
+        if(curado=true){
+            System.out.println(getNombre()+" se ha curado exitosamente");
+        }else{
+            System.out.println(getNombre()+" le ha sentado mal "+medicina);
+        }
+        
     }
 
     @Override

@@ -40,6 +40,8 @@ public abstract class Persona {
     }
 
     //metodo que heredaran las clases hijas
-    public abstract void renovarNIF(LocalDate fechaSolicitud);
+    public void renovarNIF(LocalDate fechaSolicitud){
+        nif.renovarNif(fechaSolicitud);
+    }
 
 }
