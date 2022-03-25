@@ -53,6 +53,22 @@ public class Hospital {
         pacientes.add(paciente);
     }
 
+    public ArrayList<Paciente> getPacientes() {
+        return pacientes;
+    }
+
+    public void setPacientes(ArrayList<Paciente> pacientes) {
+        this.pacientes = pacientes;
+    }
+
+    public ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(ArrayList<Empleado> empleados) {
+        this.empleados = empleados;
+    }
+
     @Override
     public String toString() {
         return "Hospital:" + "nombre=" + nombre + ", direccion=" + direccion + ", numeroCamas=" + numeroCamas;

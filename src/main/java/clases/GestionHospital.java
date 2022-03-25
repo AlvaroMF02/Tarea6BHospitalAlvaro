@@ -38,10 +38,26 @@ public class GestionHospital {
         int medicAlea = alea.nextInt(2);    //(1 - 0 + 1) + 0;  (mayor - menor + 1) + menor
         int pacieAlea = alea.nextInt(5);    //(4 - 0 + 1) + 0;
 
-        //crear numero aleatorio para el indice
-        if (hospital.get(0) instanceof Medico) {
-            ((Medico) hospital.get(0)).;
-        }
+        //crear numero aleatorio para el indice     no hace falta hacer casting porque ya es un arraylist de pacientes y empleados
+        
+        hospital.getEmpleados().get(medicAlea);
+        
+        hospital.getPacientes().get(pacieAlea).tomarMedicina("Paracetamol");
 
-    }
+        
+        for (hospital.getEmpleados() p : a) {
+            if(hospital.getEmpleados().get(medicAlea) instanceof Medico){
+            ((Medico) hospital.getEmpleados().get(medicAlea).)
+        }
+        }
+        
+        
+        if(hospital.getEmpleados().get(medicAlea) instanceof Medico){
+            ((Medico) hospital.getEmpleados().get(medicAlea).)
+        }
+        
+        
+        Hospital c = (Hospital) hospital.getEmpleados().get(medicAlea).
+        
+        
 }
