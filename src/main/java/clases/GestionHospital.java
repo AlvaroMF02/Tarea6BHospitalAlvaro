@@ -37,27 +37,32 @@ public class GestionHospital {
         Random alea = new Random();
         int medicAlea = alea.nextInt(2);    //(1 - 0 + 1) + 0;  (mayor - menor + 1) + menor
         int pacieAlea = alea.nextInt(5);    //(4 - 0 + 1) + 0;
-
-        //crear numero aleatorio para el indice     no hace falta hacer casting porque ya es un arraylist de pacientes y empleados
         
+        /*
         hospital.getEmpleados().get(medicAlea);
-        
-        hospital.getPacientes().get(pacieAlea).tomarMedicina("Paracetamol");
+        hospital.getPacientes().get(pacieAlea);  //.tomarMedicina("Paracetamol");
 
+        //me deja acceder al metodo de pacientes porque no hay otra clase de por medio
+        //mientras que en Medico no me deja porque está Empleado de por medio
         
-        for (hospital.getEmpleados() p : a) {
-            if(hospital.getEmpleados().get(medicAlea) instanceof Medico){
+        
+        for (int i = 0; i < hospital.getEmpleados().size(); i++) {
+            if (hospital.getEmpleados().get(medicAlea) instanceof Medico) {
             ((Medico) hospital.getEmpleados().get(medicAlea).)
         }
+            
         }
-        
-        
-        if(hospital.getEmpleados().get(medicAlea) instanceof Medico){
+        //casting
+        if (hospital.getEmpleados().get(medicAlea) instanceof Medico) {
             ((Medico) hospital.getEmpleados().get(medicAlea).)
         }
+         */
         
-        
-        Hospital c = (Hospital) hospital.getEmpleados().get(medicAlea).
-        
-        
+        //calcular el IRPF de todos los empleados
+        hospital.getEmpleados().get(0).renovarNIF(LocalDate.EPOCH);
+
+        //renovar el NIF a un paciente
+        hospital.getPacientes().get(pacieAlea).renovarNIF(LocalDate.EPOCH);
+
+    }
 }
