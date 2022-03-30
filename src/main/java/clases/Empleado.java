@@ -7,7 +7,7 @@ package clases;
 public abstract class Empleado extends Persona {
 
     private String numeroSeguridadSocial;
-    private double salario;
+    private double salario;   
 
     public Empleado(String numeroSeguridadSocial, double salario, String nombre, String apellido, Nif nif) {
         super(nombre, apellido, nif);

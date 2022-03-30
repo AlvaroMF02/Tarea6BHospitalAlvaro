@@ -27,24 +27,28 @@ public class Administrativo extends Empleado {
 
     //metodo propio de Administrativo
     public void registrarDocumento(String nombreDoc) {
-        System.out.println(getNombre() + " " + getApellido() + " ha registrado el documento " + nombreDoc + ", cuyo hashcode es " + nombreDoc.hashCode());
+        System.out.println(getNombre() + " " + getApellido() + " ha registrado el documento " 
+                + nombreDoc + ", cuyo hashcode es " + nombreDoc.hashCode());
     }
 
     //metodo heredado de Empleado
     public double calcularIRPF() {
-        double resultado = 0;
-        switch (this.grupo) {
-            case C:
-                resultado = getSalario() * 0.175;
-                break;
-            case D:
-                resultado = getSalario() * 0.18;
-                break;
-            case A:
-                resultado = getSalario() * 0.185;
-                break;
-        }
-        return resultado;
+//        double resultado = 0;
+//        switch (this.grupo) {
+//            case C:
+//                resultado = getSalario() * 0.175;
+//                break;
+//            case D:
+//                resultado = getSalario() * 0.18;
+//                break;
+//            case A:
+//                resultado = getSalario() * 0.185;
+//                break;
+//        }
+//        return resultado;
+        return super.getSalario() * grupo.getIrpf(); //si fuera protected valdria poner
+              //this.salario    en vez de super.getSalario()
+        
     }
 
     @Override

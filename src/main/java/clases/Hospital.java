@@ -11,8 +11,8 @@ public class Hospital {
     private String nombre;
     private String direccion;
     private int numeroCamas;
-    private ArrayList<Paciente> pacientes = new ArrayList<>();
-    private ArrayList<Empleado> empleados = new ArrayList<>();
+    private ArrayList<Paciente> pacientes;
+    private ArrayList<Empleado> empleados;
 
     public Hospital(String nombre, String direccion, int numeroCamas) {
         this.nombre = nombre;

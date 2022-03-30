@@ -10,7 +10,7 @@ public abstract class Persona {
 
     private String nombre;
     private String apellido;
-    private Nif nif;
+    private Nif nif;    //puede ser final, al tratarse de un objeto, con un primitivo no se podria
 
     public Persona(String nombre, String apellido, Nif nif) {
         this.nombre = nombre;
@@ -18,7 +18,7 @@ public abstract class Persona {
         this.nif = nif;
     }
 
-    public Persona() {  //sigo sin saber para que se crea uno vacio :)
+    public Persona() { 
         super();
     }
 
